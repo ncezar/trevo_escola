@@ -1,0 +1,10 @@
+1- select * from turmas
+2- select * from estudantes
+3 - select e.nome, e.sobrenome, t.titulo from estudantes e join turmas t on t.id=e.turma_id
+4-select e.nome, e.sobrenome, b.nota, m.titulo from estudantes e join boletins b on b.aluno_id=e.id join materias m on b.materia_id=m.id
+5-select p.nome,p.sobrenome,m.titulo from professores p join materias m on m.id=p.materia_id
+6-
+select t.titulo, t.periodo, g.dia_semana from turmas t join grade g on t.id=g.turma_id
+
+select t.titulo, t.periodo, g.dia_semana, u.hora_inicio, u.hora_fim from turmas t join grade g on t.id=g.turma_id join grade_aula a on a.grade_id=g.id
+join aula u on u.id=a.aula_id where t.titulo='A'
